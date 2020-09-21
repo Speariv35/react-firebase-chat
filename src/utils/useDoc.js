@@ -3,8 +3,8 @@ import {db} from "../firebase";
 
 export default function useDoc(path) {
     const [doc, setDoc] = useState([]);
-    useEffect(async () => {
-       const doc =  db.doc(path).get().then(doc => {
+    useEffect(() => {
+       return  db.doc(path).onSnapshot(doc => {
             setDoc({
                 id: doc.id,
                 ...doc.data()

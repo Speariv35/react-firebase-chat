@@ -22,7 +22,7 @@ export default function useCollection(path, orderBy) {
 
             setRecords(records);
         })
-    }, [])
+    }, [path, orderBy])
     return records;
 }
 

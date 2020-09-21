@@ -1,13 +1,13 @@
 import React from 'react';
 import {db} from "../firebase";
 
-function ChannelInputBox({user}) {
+function ChannelInputBox({channelId, user}) {
     return (
         <form onSubmit={event => {
             event.preventDefault();
             const value = event.target.elements[0].value;
             db.collection('channels')
-                .doc('general')
+                .doc(channelId)
                 .collection('messages')
                 .add({
                     user: db.collection('users').doc(user.uid),

@@ -1,11 +1,9 @@
 import React from 'react';
 import useCollection from "../utils/useCollection";
-import useDoc from "../utils/useDoc";
 import FirstMessageFromUser from "./FirstMessageFromUser";
 
-function Messages() {
-
-    const messages = useCollection('channels/general/messages', 'createdAt');
+function Messages({channelId}) {
+    const messages = useCollection(`channels/${channelId}/messages`, 'createdAt');
     return (
         <div className="Messages">
             <div className="EndOfMessages">That's every message!</div>
