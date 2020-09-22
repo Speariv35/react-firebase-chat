@@ -30,6 +30,17 @@ body {
   flex: 1;
 }
 
+.NavChannel {
+  margin: 0 20px;
+  border-radius: 15px;
+  transition: 0.2s ease-in;
+}
+.NavChannel:hover {
+  background: #ffffff;
+  transition: 0.2s ease-in;
+  color: #454545;
+}
+
 .Welcome {
   width: 70%;
   margin: 0 auto;
@@ -93,11 +104,13 @@ body {
   border-bottom: solid 1px #ccc;
 }
 
-.Topic {
+.TopicInput {
+  font: inherit;
+  border: 1px solid transparent;
 }
 
-.TopicInput {
-  font-weight: normal;
+.TopicInput:hover {
+  border-color: #ccc;
 }
 
 .Messages {

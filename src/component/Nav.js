@@ -20,7 +20,7 @@ function Nav({user, channels}) {
             </div>
             <nav className="ChannelNav">
                 {channels.map(channel => (
-                    <Link key={channel.id} to={`/channel/${channel.id}`}># {channel.id}</Link>
+                    <Link className='NavChannel'  key={channel.id} to={`/channel/${channel.id}`}># {channel.id}</Link>
                 ))}
             </nav>
         </div>

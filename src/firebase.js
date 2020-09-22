@@ -15,10 +15,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-const rtdb = firebase.database();
+export const db = firebase.firestore();
+export const rtdb = firebase.database();
+export const fireb = firebase;
 
-const setupPresence = (user) => {
+export const setupPresence = (user) => {
     const isOfflineForRTDB = {
         state: 'offline',
         lastChanged: firebase.database.ServerValue.TIMESTAMP
@@ -53,7 +54,7 @@ const setupPresence = (user) => {
     }));
 }
 
-const setActiveChannel = (user, channelId) => {
+export const setActiveChannel = (user, channelId) => {
     db.doc(`users/${user.uid}`)
         .update({
                 channels: {
@@ -63,11 +64,11 @@ const setActiveChannel = (user, channelId) => {
         )
 }
 
-const handleLogOut = () => {
+export const handleLogOut = () => {
     firebase.auth().signOut();
 }
 
-const addMessage = (user, channelId, value) => {
+export const addMessage = (user, channelId, value) => {
     db.collection('channels')
         .doc(channelId)
         .collection('messages')
@@ -77,5 +78,9 @@ const addMessage = (user, channelId, value) => {
             createdAt: new Date()
         })
 }
+export const changeChannelTopic = (channel, value) => {
+    db.doc(`channels/${channel.id}`)
+        .update({topic: value})
+}
 
-export {db, firebase, setupPresence, setActiveChannel, handleLogOut, addMessage};
+
