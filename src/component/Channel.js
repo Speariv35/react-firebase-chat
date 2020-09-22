@@ -3,20 +3,13 @@ import ChannelInfo from "./ChannelInfo";
 import Messages from "./Messages";
 import ChatInputBox from "./ChatInputBox";
 import Members from "./Members";
-import {db} from "../firebase";
+import {setActiveChannel} from "../firebase";
 
 function Channel({user, channelId, channels}) {
     const channel = channels.find(channel => channel.id === channelId)
-
     useEffect(() => {
-        db.doc(`users/${user.uid}`)
-            .update({
-                    channels: {
-                        [channelId]: true
-                    }
-                }
-            )
-    },[user.uid, channelId])
+        setActiveChannel(user, channelId)
+    }, [user.uid, channelId])
     return (
         <div className="Channel">
             <div className="ChannelMain">

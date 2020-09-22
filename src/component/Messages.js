@@ -1,6 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import useCollection from "../utils/useCollection";
-import FirstMessageFromUser from "./FirstMessageFromUser";
+import MessageWithAvatar from "./MessageWithAvatar";
 import {shouldShowAvatar, shouldShowDay} from "../utils/helpers";
 import useSmartScroll from "../utils/useSmartScroll";
 
@@ -16,7 +16,7 @@ function Messages({channelId}) {
                 const showAvatar = shouldShowAvatar(messages[index - 1], message)
                 const showDay = shouldShowDay(messages[index - 1], message);
                 return showAvatar ? (
-                    <FirstMessageFromUser
+                    <MessageWithAvatar
                         message={message}
                         showDay={showDay}/>
                 ) : (
@@ -27,12 +27,11 @@ function Messages({channelId}) {
                             </div>
                         </div>
                     </div>
-                )
+                );
             })
             }
         </div>
     )
 }
-
 
 export default Messages;

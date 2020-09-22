@@ -5,10 +5,9 @@ function Members({channelId}) {
     const members = useCollection('users', null, [`channels.${channelId}`, '==', true])
     return (
         <div className="Members">
-            {members.map(member => {
+            {members.map((member, index) => {
                 return (
-                    <div>
-
+                    <div key={index}>
                         <div className="Member">
                             <div key={member.id} className={`MemberStatus ${member?.status?.state}`}/>
                             {member.name}

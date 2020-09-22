@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 import 'firebase/firestore';
 import 'firebase/database';
 import 'firebase/auth';
@@ -53,6 +53,29 @@ const setupPresence = (user) => {
     }));
 }
 
+const setActiveChannel = (user, channelId) => {
+    db.doc(`users/${user.uid}`)
+        .update({
+                channels: {
+                    [channelId]: true
+                }
+            }
+        )
+}
 
+const handleLogOut = () => {
+    firebase.auth().signOut();
+}
 
-export {db, firebase, setupPresence};
+const addMessage = (user, channelId, value) => {
+    db.collection('channels')
+        .doc(channelId)
+        .collection('messages')
+        .add({
+            user: db.collection('users').doc(user.uid),
+            text: value,
+            createdAt: new Date()
+        })
+}
+
+export {db, firebase, setupPresence, setActiveChannel, handleLogOut, addMessage};

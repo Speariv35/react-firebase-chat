@@ -30,6 +30,12 @@ body {
   flex: 1;
 }
 
+.Welcome {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .User {
   padding: 20px;
   display: flex;
@@ -91,12 +97,7 @@ body {
 }
 
 .TopicInput {
-  font: inherit;
-  border: 1px solid transparent;
-}
-
-.TopicInput:hover {
-  border-color: #ccc;
+  font-weight: normal;
 }
 
 .Messages {
@@ -140,6 +141,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-color: #fefefe;
+  background-image: url(https://placekitten.com/64/64);
 }
 
 .Author {
@@ -164,7 +166,7 @@ body {
 }
 
 .ChatInputBox {
-  padding: 0px 20px 20px 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .ChatInput {

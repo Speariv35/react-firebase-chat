@@ -1,14 +1,8 @@
 import React from 'react';
-import * as firebase from "firebase";
 import {Link} from "@reach/router";
+import {handleLogOut} from "../firebase";
 
 function Nav({user, channels}) {
-
-
-    const handleLogOut = () => {
-        firebase.auth().signOut();
-    }
-
     return (
         <div className="Nav">
             <div className="User">

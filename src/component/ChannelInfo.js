@@ -4,7 +4,7 @@ function ChannelInfo({channel}) {
     return  (
         <div className="ChannelInfo">
             <div className="Topic">
-                Topic: <input type="text" className="TopicInput" value={channel?.topic}/>
+                Topic: <span  className="TopicInput">{channel?.topic}</span>
             </div>
             <div className="ChannelName">#{channel?.id}</div>
         </div>
