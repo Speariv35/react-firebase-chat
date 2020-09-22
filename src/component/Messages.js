@@ -1,16 +1,20 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import useCollection from "../utils/useCollection";
 import FirstMessageFromUser from "./FirstMessageFromUser";
+import {shouldShowAvatar, shouldShowDay} from "../utils/helpers";
+import useSmartScroll from "../utils/useSmartScroll";
 
 function Messages({channelId}) {
     const messages = useCollection(`channels/${channelId}/messages`, 'createdAt');
+    const scrollerRef = useRef();
+    useSmartScroll(scrollerRef)
+
     return (
-        <div className="Messages">
+        <div ref={scrollerRef} className="Messages">
             <div className="EndOfMessages">That's every message!</div>
             {messages.map((message, index) => {
-                const prev = messages[index - 1];
-                const showAvatar = message.user.id !== prev?.user.id;
-                const showDay = false;
+                const showAvatar = shouldShowAvatar(messages[index - 1], message)
+                const showDay = shouldShowDay(messages[index - 1], message);
                 return showAvatar ? (
                     <FirstMessageFromUser
                         message={message}

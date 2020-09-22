@@ -16,7 +16,7 @@ function ChannelInputBox({channelId, user}) {
                 })
             event.target.reset();
         }} className="ChatInputBox">
-            <input name="message" className="ChatInput" placeholder="Message #general"/>
+            <input name="message" className="ChatInput" placeholder={`Message #${channelId}`}/>
         </form>
     )
 }

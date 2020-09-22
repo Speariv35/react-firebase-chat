@@ -1,10 +1,9 @@
 import React from 'react';
-import useCollection from "../utils/useCollection";
 import * as firebase from "firebase";
 import {Link} from "@reach/router";
 
-function Nav({user}) {
-    const channels = useCollection('channels');
+function Nav({user, channels}) {
+
 
     const handleLogOut = () => {
         firebase.auth().signOut();

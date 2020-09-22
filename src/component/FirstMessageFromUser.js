@@ -1,5 +1,6 @@
 import React from "react";
 import useDoc from "../utils/useDoc";
+import {formatDate} from "../utils/helpers";
 
 function FirstMessageFromUser({message, showDay}) {
     const author = useDoc(message.user.path);
@@ -8,7 +9,7 @@ function FirstMessageFromUser({message, showDay}) {
             {showDay && (
                 <div className="Day">
                     <div className="DayLine"/>
-                    <div className="DayText">12/6/2018</div>
+                    <div className="DayText">{formatDate(message.createdAt.seconds*1000, 'dd.MM.yy')}</div>
                     <div className="DayLine"/>
                 </div>
             )}
@@ -17,7 +18,7 @@ function FirstMessageFromUser({message, showDay}) {
                 <div className="Author">
                     <div>
                         <span className="UserName">{author && author.name} </span>
-                        <span className="TimeStamp">3:26 PM</span>
+                        <span className="TimeStamp">{formatDate(message.createdAt.seconds*1000, 'HH:mm')}</span>
                     </div>
                     <div className="MessageContent">
                         {message.text}

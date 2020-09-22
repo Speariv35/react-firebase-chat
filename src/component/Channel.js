@@ -4,11 +4,12 @@ import Messages from "./Messages";
 import ChatInputBox from "./ChatInputBox";
 import Members from "./Members";
 
-function Channel({user, channelId}) {
+function Channel({user, channelId, channels}) {
+    const channel = channels.find(channel => channel.id === channelId)
     return (
         <div className="Channel">
             <div className="ChannelMain">
-                <ChannelInfo/>
+                <ChannelInfo channel={channel}/>
                 <Messages channelId={channelId}/>
                 <ChatInputBox channelId={channelId} user={user}/>
             </div>
