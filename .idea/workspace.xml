@@ -10,21 +10,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="794394b1-5cee-4506-bc28-65808875e68e" name="Default Changelist" comment="add dates">
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/useSmartScroll.js" afterDir="false" />
+    <list default="true" id="794394b1-5cee-4506-bc28-65808875e68e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Channel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Channel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ChannelInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ChannelInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ChatInputBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ChatInputBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/FirstMessageFromUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/FirstMessageFromUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/useDoc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/useDoc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Members.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Members.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/useAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/useCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/useCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/useSmartScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/useSmartScroll.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +79,7 @@
       <workItem from="1600677845225" duration="15123000" />
       <workItem from="1600701057905" duration="154000" />
       <workItem from="1600701219347" duration="3279000" />
-      <workItem from="1600760880509" duration="4169000" />
+      <workItem from="1600760880509" duration="10178000" />
     </task>
     <task id="LOCAL-00001" summary="Add messages refactoring">
       <created>1600701292828</created>
@@ -100,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600703320633</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add dates and some refactoring">
+      <created>1600765587560</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600765587560</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,21 +123,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add messages refactoring" />
     <MESSAGE value="add router for channels" />
-    <option name="LAST_COMMIT_MESSAGE" value="add router for channels" />
+    <MESSAGE value="add dates and some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dates and some refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="594" y="225" key="#Inspections" timestamp="1600696361247">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="594" y="225" key="#Inspections/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600696361247" />
-    <state x="537" y="115" key="CommitChangelistDialog2" timestamp="1600765283032">
+    <state x="537" y="115" key="CommitChangelistDialog2" timestamp="1600765587398">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="537" y="115" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600765283032" />
-    <state x="192" y="97" width="1536" height="864" key="DiffContextDialog" timestamp="1600765253408">
+    <state x="537" y="115" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600765587398" />
+    <state x="192" y="97" width="1536" height="864" key="DiffContextDialog" timestamp="1600765583172">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="192" y="97" width="1536" height="864" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600765253408" />
+    <state x="192" y="97" width="1536" height="864" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600765583172" />
     <state x="461" y="179" key="SettingsEditor" timestamp="1600689204276">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -148,10 +151,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600701047375" />
-    <state x="661" y="266" width="598" height="548" key="find.popup" timestamp="1600703272033">
+    <state x="661" y="266" width="598" height="548" key="find.popup" timestamp="1600768882184">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="661" y="266" width="598" height="548" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600703272033" />
+    <state x="661" y="266" width="598" height="548" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1600768882184" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
