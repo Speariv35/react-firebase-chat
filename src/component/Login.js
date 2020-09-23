@@ -8,15 +8,21 @@ function Login() {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
-            .catch( err => {
+            .catch(err => {
                 setAuthError(err)
             })
     }
 
     return (
         <div className="Login">
-            <h1>Spear React Chat</h1>
-            <button onClick={handleSignIn}>Sing In with Google</button>
+            <p className='Logo'>React Chat App</p>
+            <div onClick={handleSignIn} className="google-btn">
+                <div className="google-icon-wrapper">
+                    <img className="google-icon"
+                         src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                </div>
+                <p className="btn-text"><b>Sign in with google</b></p>
+            </div>
             {authError && (
                 <div>
                     <p>Sorry, there was a problem</p>

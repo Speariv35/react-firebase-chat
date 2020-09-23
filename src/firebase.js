@@ -78,6 +78,12 @@ export const addMessage = (user, channelId, value) => {
             createdAt: new Date()
         })
 }
+
+export const addChannel = (id) => {
+    db.collection('channels').doc(id)
+        .set({topic: 'You can change it any time!'})
+}
+
 export const changeChannelTopic = (channel, value) => {
     db.doc(`channels/${channel.id}`)
         .update({topic: value})

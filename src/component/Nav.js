@@ -1,8 +1,16 @@
 import React from 'react';
 import {Link} from "@reach/router";
-import {handleLogOut} from "../firebase";
+import {addChannel, handleLogOut} from "../firebase";
 
 function Nav({user, channels}) {
+
+    const handleCreateChannel = (event) => {
+        event.preventDefault();
+        const value = event.target.elements[0].value;
+        addChannel(value)
+        event.target.reset();
+    };
+
     return (
         <div className="Nav">
             <div className="User">
@@ -20,9 +28,12 @@ function Nav({user, channels}) {
             </div>
             <nav className="ChannelNav">
                 {channels.map(channel => (
-                    <Link className='NavChannel'  key={channel.id} to={`/channel/${channel.id}`}># {channel.id}</Link>
+                    <Link className='NavChannel' key={channel.id} to={`/channel/${channel.id}`}># {channel.id}</Link>
                 ))}
             </nav>
+            <form onSubmit={handleCreateChannel} className="ChannelCreateInputBox">
+                <input name="channel" className="ChannelCreateInput" placeholder={`Type to add topic!`}/>
+            </form>
         </div>
     )
 }
